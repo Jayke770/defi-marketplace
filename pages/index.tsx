@@ -11,16 +11,14 @@ const Home: NextPage = () => {
         <title>{config.APPNAME}</title>
       </Head>
       <div className='relative h-screen w-screen flex justify-center items-center'>
-        <div className='absolute w-full h-full top-0 bg-gradient-to-br from-teamdao-secondary/15 to-zinc-900/15 '>
-
-        </div>
-        <div className='absolute flex flex-col lg:flex-row lg:justify-between items-center gap-3 px-5 md:px-20 lg:px-15 lg:py-5 xl:px-56 xl:py-10 w-full'>
+        <div className='absolute w-full h-full top-0 bg-gradient-to-bl from-teamdao-secondary/15 via-zinc-900/15 to-zinc-900/15 ' />
+        <div className='absolute h-full flex flex-col lg:flex-row lg:justify-between items-center gap-3 px-5 pt-10 md:px-20 lg:px-15 lg:py-5 xl:px-56 xl:py-10 w-full'>
           <div className='w-full flex flex-col gap-2 md:gap-5'>
             <h1 className='font-bold text-4xl text-zinc-200'>Buy crypto in a matter of seconds</h1>
             <div className='font- text-zinc-300'>
-              Buy ETH and 99+ cryptocurrencies
+              {"Buy ETH and 99+ cryptocurrency "}
               <br className='hidden xl:block' />
-              using your credit or debit card.
+              {"using your credit or debit card."}
             </div>
             <div className='flex gap-4'>
               <Image
@@ -37,12 +35,12 @@ const Home: NextPage = () => {
                 className="object-contain" />
             </div>
           </div>
-          <div className=' w-full'>
+          <div className='w-full mt-5 md:mt-0'>
             <Card
               colors={{
                 bgMaterial: 'bg-md-light-surface-1 dark:bg-zinc-900'
               }}
-              className='w-full lg:w-[400px]'
+              className='w-full lg:w-[400px] translucent shadow-teamdao-primary/20 shadow'
               margin='m-0'
               raised>
               <div className='flex flex-col gap-3 p-4'>
@@ -62,7 +60,7 @@ const Home: NextPage = () => {
                       className='!w-auto k-color-brand-teamdao-primary'>
                       <div className='flex items-center justify-center gap-2 px-2'>
                         USD
-                        <FaChevronRight className='mt-0.5' size={'0.75rem'} />
+                        <FaChevronRight size={'0.75rem'} />
                       </div>
                     </Button>
                   </div>
@@ -82,13 +80,16 @@ const Home: NextPage = () => {
                       className='!w-auto k-color-brand-teamdao-primary'>
                       <div className='flex items-center justify-center gap-2 px-2'>
                         ETH
-                        <FaChevronRight className='mt-0.5' size={'0.75rem'} />
+                        <FaChevronRight size={'0.75rem'} />
                       </div>
                     </Button>
                   </div>
                 </div>
                 <Button
-                  className='mt-8 k-color-brand-teamdao-primary'>Buy $TEAM</Button>
+                  colors={{
+                    textMaterial: 'text-md-light-primary dark:text-black'
+                  }}
+                  className='mt-8 k-color-brand-teamdao-primary !font-bold'>Buy $TEAM</Button>
               </div>
             </Card>
           </div>
